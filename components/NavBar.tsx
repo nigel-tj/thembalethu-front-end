@@ -1,27 +1,30 @@
-import React, { ReactNode } from 'react'
 import { useEffect, useState } from "react";
 import { IoIosSearch, IoIosLogIn } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
+
 import Image from "next/image";
-import Link from 'next/link'
-import Head from 'next/head'
 
-type Props = {
-  children?: ReactNode
-  title?: string
-}
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
+
+
+const NavBar = () => {
+  const router = useRouter();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
+  const [address, setAddress] = useState<string | null>(null);
+
+ 
+
+ 
+
+  return (
     <nav className="flex items-center justify-between p-6 max-w-full h-8 bg-[#0171CE]">
       
       <div className="flex items-center">
-        <Link href="">
+        <Link href="/HomeScreen">
           <Image
             src={""}
             alt="logo"
@@ -32,21 +35,20 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         </Link>
 
         <div className="flex ml-16 space-x-4 rounded-full">
-          <h1 className="w-full p-2 mr-2 bg-white">address</h1>
+          <h1 className="w-full p-2 mr-2 bg-white">{address}</h1>
 
-      
         </div>
       </div>
       <div className="flex items-center">
-     
+       
           <Link
             className="flex items-center space-x-2 text-white"
-            href={""}
+            href={"/UserDashboard"}
           >
             <span>Meu Perfil</span>
             <IoIosLogIn size={20} />
           </Link>
-    
+      
           <Link
             className="flex items-center space-x-2 text-white"
             href={"/LoginScreenUser"}
@@ -54,16 +56,10 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
             <span>Conecte-se</span>
             <IoIosLogIn size={20} />
           </Link>
-    
+       
       </div>
     </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
+  );
+};
 
-export default Layout
+export default NavBar;

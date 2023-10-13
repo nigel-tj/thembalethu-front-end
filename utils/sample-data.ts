@@ -1,9 +1,13 @@
-import { User } from '../interfaces'
+import axios from 'axios';
 
-/** Dummy user data. */
-export const sampleUserData: User[] = [
-  { id: 101, name: 'Alice' },
-  { id: 102, name: 'Bob' },
-  { id: 103, name: 'Caroline' },
-  { id: 104, name: 'Dave' },
-]
+const apiUrl = 'http://127.0.0.1:8000/'; 
+
+export const fetchData = async (endpoint) => {
+  try {
+    const response = await axios.get(apiUrl + endpoint);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error;
+  }
+};
