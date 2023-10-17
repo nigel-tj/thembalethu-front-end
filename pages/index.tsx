@@ -1,28 +1,42 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import { useState, useEffect } from 'react';
-import { fetchData } from '../utils/sample-data';
+// IndexPage.js
+import React, { useState } from 'react';
+import { IoChatbubbleOutline } from 'react-icons/io5';
 import NavBar from '../components/NavBar';
+import Banner from '../components/Banner';
+import Client from '../components/Client';
+import Footer from '../components/Footer';
+import ChatPopup from '../components/ChatPopup';
+import About from '../components/About';
 
 const IndexPage = () => {
+    const [isChatOpen, setChatOpen] = useState(false);
 
-  const [carouselData, setCarouselData] = useState([]);
+    const openChat = () => setChatOpen(true);
+    const closeChat = () => setChatOpen(false);
 
-  useEffect(() => {
-    const fetchCarouselData = async () => {
-      try {
-        const data = await fetchData('carousel/');
-        setCarouselData(data);
-      } catch (error) {
-        // Handle error
-        console.error('Error:', error);
-      }
-    };
+    return (
+        <>
+            <NavBar />
+            <Banner />
+            <div className="relative mx-auto">
+                <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-[#0000FF] via-[#060606] to-[#f90404] rounded-md filter blur-3xl opacity-50 -z-20" />
+                <Client />
+            </div>
+            <section id="about" className="snap-center">
+        <About  />
+      </section>
+            <Footer />
 
-    fetchCarouselData();
-  }, []);
-  return<NavBar />
-  
-}
+            {/* Chat Icon/Button 
+            <button className="fixed bottom-10 right-10 bg-green-500 text-white border-none p-4 rounded-full text-xl cursor-pointer" onClick={openChat}>
+                <IoChatbubbleOutline />
+            </button>
 
-export default IndexPage
+            {/* Chat Popup 
+            <ChatPopup isOpen={isChatOpen} onClose={closeChat} />
+            */}
+        </>
+    );
+};
+
+export default IndexPage;
