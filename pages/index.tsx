@@ -7,6 +7,7 @@ import Client from '../components/Client';
 import Footer from '../components/Footer';
 import ChatPopup from '../components/ChatPopup';
 import About from '../components/About';
+import ServicesSection from '../components/ServicesSection';
 
 const IndexPage = () => {
     const [isChatOpen, setChatOpen] = useState(false);
@@ -24,6 +25,9 @@ const IndexPage = () => {
             </div>
             <section id="about" className="snap-center">
         <About  />
+      </section>
+      <section id="about" className="snap-center">
+        <ServicesSection  />
       </section>
             <Footer />
 
