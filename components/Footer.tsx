@@ -1,4 +1,10 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,19 +14,34 @@ const Footer = () => {
           {/* Other links remain the same */}
         </ul>
         <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">
-          <a href="#" className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+          <a
+            href="#"
+            className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+          >
             <FaGithub size={20} />
           </a>
-          <a href="#" className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+          <a
+            href="#"
+            className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+          >
             <FaTwitter size={20} />
           </a>
-          <a href="#" className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+          <a
+            href="#"
+            className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+          >
             <FaFacebook size={20} />
           </a>
-          <a href="#" className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+          <a
+            href="#"
+            className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+          >
             <FaLinkedin size={20} />
           </a>
-          <a href="#" className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
+          <a
+            href="#"
+            className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
+          >
             <FaInstagram size={20} />
           </a>
         </div>

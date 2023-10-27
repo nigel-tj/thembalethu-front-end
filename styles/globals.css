@@ -1,24 +1,24 @@
 /* styles.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .chat-popup {
-    @apply hidden fixed bottom-0 right-0 border-solid border border-gray-300 z-10;
+  @apply hidden fixed bottom-0 right-0 border-solid border border-gray-300 z-10;
 }
 
 .chat-popup-content {
-    @apply max-h-96 overflow-y-auto;
+  @apply max-h-96 overflow-y-auto;
 }
 
 .open {
-    @apply block;
+  @apply block;
 }
 
 .close-btn {
-    @apply float-right p-2;
+  @apply float-right p-2;
 }
 
 .chat-icon {
-    @apply fixed bottom-10 right-10 bg-green-500 text-white border-none p-4 rounded-full text-xl cursor-pointer;
+  @apply fixed bottom-10 right-10 bg-green-500 text-white border-none p-4 rounded-full text-xl cursor-pointer;
 }

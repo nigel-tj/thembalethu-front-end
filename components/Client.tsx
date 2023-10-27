@@ -4,7 +4,6 @@ import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { fetchData } from "../utils/sample-data";
 
-
 type Restaurant = {
   id: number;
   title: string;
@@ -33,44 +32,38 @@ export default function Client() {
   useEffect(() => {
     const fetchCarouselData = async () => {
       try {
-        const data = await fetchData('api/information/clients/');
-       // const imageUrls = data.map((item) => item.image);
+        const data = await fetchData("api/information/clients/");
+        // const imageUrls = data.map((item) => item.image);
         setClients(data);
-        
       } catch (error) {
         // Handle error
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     };
 
     fetchCarouselData();
   }, []);
 
-
   return (
     <>
-   <div className="flex items-center justify-center">
-  <div className="px-0 space-y-0 md:px-10">
-    <h4 className="text-4xl font-semibold">
-      Our{" "}
-      <span className="underline">Potential</span>{" "}
-      Clients
-    </h4>
-  </div>
-</div>
+      <div className="flex items-center justify-center">
+        <div className="px-0 space-y-0 md:px-10">
+          <h4 className="text-4xl font-semibold">
+            Our <span className="underline">Potential</span> Clients
+          </h4>
+        </div>
+      </div>
 
-    
-    <div className="flex flex-row p-4 overflow-x-auto scroll-snap-x-mandatory">
-        
-      <motion.div
-        animate={controls}
-        className="flex flex-row overflow-x-auto scroll-snap-x-mandatory"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {clients.map((restaurant: Restaurant) => (
-          // eslint-disable-next-line react/jsx-key
-        
+      <div className="flex flex-row p-4 overflow-x-auto scroll-snap-x-mandatory">
+        <motion.div
+          animate={controls}
+          className="flex flex-row overflow-x-auto scroll-snap-x-mandatory"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {clients.map((restaurant: Restaurant) => (
+            // eslint-disable-next-line react/jsx-key
+
             <div
               key={restaurant.id}
               className="flex-none flex-shrink-0 scroll-snap-start"
@@ -88,10 +81,9 @@ export default function Client() {
                 </div>
               </div>
             </div>
-
-        ))}
-      </motion.div>
-    </div>
+          ))}
+        </motion.div>
+      </div>
     </>
   );
 }

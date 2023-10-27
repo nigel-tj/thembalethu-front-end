@@ -1,16 +1,16 @@
-import React, { useEffect, useState, ChangeEvent } from 'react';
+import React, { useEffect, useState, ChangeEvent } from "react";
 
 const Chat: React.FC = () => {
-  const [message, setMessage] = useState<string>('');
+  const [message, setMessage] = useState<string>("");
   const [messages, setMessages] = useState<string[]>([]);
   let socket: WebSocket;
 
   useEffect(() => {
     // Create a WebSocket connection when the component mounts
-    socket = new WebSocket('ws://127.0.0.1:8000/ws/chat/');
+    socket = new WebSocket("ws://127.0.0.1:8000/ws/chat/");
 
     // Handle incoming messages
-    socket.addEventListener('message', (event) => {
+    socket.addEventListener("message", (event) => {
       const data = JSON.parse(event.data);
       setMessages((prevMessages) => [...prevMessages, data.message]);
     });
@@ -24,9 +24,9 @@ const Chat: React.FC = () => {
   }, []); // Run this effect only once when the component mounts
 
   const sendMessage = () => {
-    if (message.trim() !== '' && socket?.readyState === WebSocket.OPEN) {
+    if (message.trim() !== "" && socket?.readyState === WebSocket.OPEN) {
       socket.send(JSON.stringify({ message }));
-      setMessage('');
+      setMessage("");
     }
   };
 
@@ -39,9 +39,11 @@ const Chat: React.FC = () => {
       </div>
       <input
         type="text"
-        placeholder='type your message'
+        placeholder="type your message"
         value={message}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setMessage(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setMessage(e.target.value)
+        }
       />
       <button onClick={sendMessage}>Send</button>
     </div>

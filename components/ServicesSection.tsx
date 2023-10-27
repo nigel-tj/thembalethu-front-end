@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { fetchData } from '../utils/sample-data';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useEffect, useState } from "react";
+import { fetchData } from "../utils/sample-data";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 interface Service {
   id: number;
@@ -16,12 +16,12 @@ function ServicesSection() {
   useEffect(() => {
     const fetchServiceData = async () => {
       try {
-        const data = await fetchData('api/services/services/');
+        const data = await fetchData("api/services/services/");
         console.log("api data", data);
         setServiceData(data);
       } catch (error) {
         // Handle error
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     };
 
@@ -41,7 +41,13 @@ function ServicesSection() {
                 What We Offer
               </h2>
               <p className="text-base text-body-color">
-                At Thembalethu Solutions, we are proud to offer a comprehensive suite of electrical services that cater to residential, commercial, and industrial clients. Our team of highly skilled and certified professionals is dedicated to providing the highest quality workmanship, adhering to industry standards, and delivering solutions that are not only reliable but also sustainable. Our core services include:
+                At Thembalethu Solutions, we are proud to offer a comprehensive
+                suite of electrical services that cater to residential,
+                commercial, and industrial clients. Our team of highly skilled
+                and certified professionals is dedicated to providing the
+                highest quality workmanship, adhering to industry standards, and
+                delivering solutions that are not only reliable but also
+                sustainable. Our core services include:
               </p>
             </div>
           </div>
@@ -59,9 +65,14 @@ function ServicesSection() {
               <div className="w-full px-4">
                 <div
                   className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-lg mb-8"
-                  style={{ background: `url(${service.image})`, backgroundSize: 'cover' }}
+                  style={{
+                    background: `url(${service.image})`,
+                    backgroundSize: "cover",
+                  }}
                 >
-                  <h4 className="font-semibold text-xl text-dark mb-3">{service.name}</h4>
+                  <h4 className="font-semibold text-xl text-dark mb-3">
+                    {service.name}
+                  </h4>
                   <p className="text-white">{service.description}</p>
                 </div>
               </div>
@@ -74,4 +85,3 @@ function ServicesSection() {
 }
 
 export default ServicesSection;
-

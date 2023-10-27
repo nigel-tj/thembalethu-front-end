@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { fetchData } from "../utils/sample-data";
 
-
 interface Restaurant {
   id: number;
   name: string;
@@ -20,25 +19,22 @@ const Banner = () => {
   useEffect(() => {
     const fetchCarouselData = async () => {
       try {
-        const data = await fetchData('api/information/carousel/');
+        const data = await fetchData("api/information/carousel/");
         const imageUrls = data.map((item) => item.image);
         setImages(imageUrls);
-        
       } catch (error) {
         // Handle error
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     };
 
     fetchCarouselData();
   }, []);
 
-
-
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prevSlide) =>
-        prevSlide === images.length - 1 ? 0 : prevSlide + 1,
+        prevSlide === images.length - 1 ? 0 : prevSlide + 1
       );
     }, 6000);
 
