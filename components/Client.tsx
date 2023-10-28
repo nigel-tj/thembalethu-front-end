@@ -58,8 +58,8 @@ export default function Client() {
         <motion.div
           animate={controls}
           className="flex flex-row overflow-x-auto scroll-snap-x-mandatory"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+         // onMouseEnter={() => setIsHovered(true)}
+        //  onMouseLeave={() => setIsHovered(false)}
         >
           {clients.map((restaurant: Restaurant) => (
             // eslint-disable-next-line react/jsx-key

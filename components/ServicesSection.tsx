@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../utils/sample-data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import { useRouter } from 'next/router';
 interface Service {
   id: number;
   name: string;
@@ -12,6 +12,15 @@ interface Service {
 
 function ServicesSection() {
   const [serviceData, setServiceData] = useState<Service[] | null>(null);
+
+  const router = useRouter();
+
+
+  const handleGetQuote = (serviceId: number) => {
+    // Here, you can define the logic to handle the quote request
+    // For this example, we'll redirect to the "Quote" page with the service ID as a query parameter
+    router.push(`/quote?serviceId=${serviceId}`);
+  };
 
   useEffect(() => {
     const fetchServiceData = async () => {
@@ -61,22 +70,32 @@ function ServicesSection() {
           useKeyboardArrows={true}
         >
           {serviceData?.map((service) => (
-            <div key={service.id}>
-              <div className="w-full px-4">
-                <div
-                  className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-lg mb-8"
-                  style={{
-                    background: `url(${service.image})`,
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <h4 className="font-semibold text-xl text-dark mb-3">
-                    {service.name}
-                  </h4>
-                  <p className="text-white">{service.description}</p>
-                </div>
-              </div>
-            </div>
+           <div key={service.id}>
+           <div className="w-full px-4">
+             <div
+               className="p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-lg mb-8 relative"
+               style={{
+                 background: `url(${service.image})`,
+                 backgroundSize: "cover",
+               }}
+             >
+               <h4 className="font-semibold text-xl text-dark mb-3">
+                 {service.name}
+               </h4>
+               <p className="text-black">{service.description}</p><br></br>
+               <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4">
+                 <button
+                   className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600"
+                   onClick={() => handleGetQuote(service.id)}
+                 >
+                   Get Quote
+                 </button>
+               </div>
+             </div>
+           </div>
+         </div>
+         
+          
           ))}
         </Carousel>
       </div>

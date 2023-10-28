@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
-import { IoIosSearch, IoIosLogIn } from "react-icons/io";
-import { IoLocationSharp } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { fetchData } from "../utils/sample-data";
-import { IoMenu, IoClose } from "react-icons/io5"; // Import the React icons
 
 const NavBar = () => {
   const router = useRouter();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [searchText, setSearchText] = useState("");
   const [image, setImages] = useState<string | null>(null);
   const dataObj = Array.isArray(image) && image.length > 0 ? image[0] : null;
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,7 +31,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between p-6 max-w-full h-8 bg-blue-500">
+    <nav className="flex items-center justify-between p-6 max-w-full h-8 bg-black h-34 relative">
       <div className="flex items-center">
         <Link href="/HomeScreen">
           <Image
@@ -43,7 +39,7 @@ const NavBar = () => {
             alt={dataObj?.title}
             width={40}
             height={40}
-            className="mr-2"
+            className="mr-2 w-32 h-28"
           />
         </Link>
       </div>
@@ -78,40 +74,40 @@ const NavBar = () => {
           onClick={toggleMobileMenu}
           className="text-white cursor-pointer"
         >
-          {isMobileMenuOpen ? <IoClose /> : <IoMenu />} {/* Use React icons */}
+          {isMobileMenuOpen ? <IoClose /> : <IoMenu />}
         </button>
       </div>
-      {isMobileMenuOpen && (
-        <div className="md:hidden flex flex-col space-y-4 bg-blue-500 absolute top-16 left-0 right-0">
-          <Link
-            className="flex items-center text-white p-4"
-            href={"/UserDashboard"}
-          >
-            <span>About Us</span>
-          </Link>
+      <div
+        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-64 h-screen bg-white z-10`}
+      >
+        <Link
+          className="flex items-center text-black p-4"
+          href={"/UserDashboard"}
+        >
+          <span>About Us</span>
+        </Link>
 
-          <Link
-            className="flex items-center text-white p-4"
-            href={"/LoginScreenUser"}
-          >
-            <span>Services</span>
-          </Link>
+        <Link
+          className="flex items-center text-black p-4"
+          href={"/LoginScreenUser"}
+        >
+          <span>Services</span>
+        </Link>
 
-          <Link
-            className="flex items-center text-white p-4"
-            href={"/LoginScreenUser"}
-          >
-            <span>Our Projects</span>
-          </Link>
+        <Link
+          className="flex items-center text-black p-4"
+          href={"/LoginScreenUser"}
+        >
+          <span>Our Projects</span>
+        </Link>
 
-          <Link
-            className="flex items-center text-white p-4"
-            href={"/LoginScreenUser"}
-          >
-            <span>Contact Us</span>
-          </Link>
-        </div>
-      )}
+        <Link
+          className="flex items-center text-black p-4"
+          href={"/LoginScreenUser"}
+        >
+          <span>Contact Us</span>
+        </Link>
+      </div>
     </nav>
   );
 };
