@@ -44,7 +44,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="hidden md:flex items-center space-x-8">
-        <Link className="flex items-center text-white" href={"/UserDashboard"}>
+        <Link className="flex items-center text-white" href={"/AboutPage"}>
           <span>About Us</span>
         </Link>
 
@@ -82,7 +82,7 @@ const NavBar = () => {
       >
         <Link
           className="flex items-center text-black p-4"
-          href={"/UserDashboard"}
+          href={"/AboutPage"}
         >
           <span>About Us</span>
         </Link>
