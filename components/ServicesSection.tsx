@@ -1,3 +1,4 @@
+"use client ";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../utils/sample-data";
 import { Carousel } from "react-responsive-carousel";
