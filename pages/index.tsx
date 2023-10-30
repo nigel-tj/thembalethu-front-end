@@ -52,13 +52,7 @@ const IndexPage = () => {
 
       <NavBar />
       <Banner />
-      <div className="relative">
-        <section id="about" className="snap-center">
-          <ServicesSection />
-        </section>
-        <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-[#0000FF] via-[#060606] to-[#f90404] rounded-md filter blur-3xl opacity-50 -z-20" />
-        <Client />
-      </div>
+     
       <Footer />
     </>
   );
