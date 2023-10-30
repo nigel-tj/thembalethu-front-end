@@ -11,10 +11,14 @@ interface Service {
   image: string; // Assuming you have an image URL in your API response
 }
 
+
 function ServicesSection() {
   const [serviceData, setServiceData] = useState<Service[] | null>(null);
 
   const router = useRouter();
+  
+ 
+
 
 
   const handleGetQuote = (serviceId: number) => {
@@ -39,12 +43,15 @@ function ServicesSection() {
   }, []);
 
   return (
-    <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
-      <div className="container">
+    <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]"
+    
+    >
+      <div className="container"
+      >
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
-              <span className="font-semibold text-lg text-primary mb-2 block">
+              <span className="block mb-2 text-lg font-semibold text-primary">
                 Our Core Services
               </span>
               <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
@@ -80,13 +87,13 @@ function ServicesSection() {
                  backgroundSize: "cover",
                }}
              >
-               <h4 className="font-semibold text-xl text-dark mb-3">
+               <h4 className="mb-3 text-xl font-semibold text-dark">
                  {service.name}
                </h4>
                <p className="text-black">{service.description}</p><br></br>
                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4">
                  <button
-                   className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600"
+                   className="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600"
                    onClick={() => handleGetQuote(service.id)}
                  >
                    Get Quote
