@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import Client from "../components/Client";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import background_logo from '../assets/Untitled.png'; // Adjust the path
+//import background_logo from '../assets/Untitled.png'; // Adjust the path
 
 import ServicesSection from "../components/ServicesSection";
 import Head from 'next/head';
@@ -45,8 +45,7 @@ const IndexPage = () => {
 
   const firstPageInfo =
     Array.isArray(aboutData) && aboutData?.length > 0 ? aboutData[0] : null;
-  
-  
+
   
   return (
     <>
@@ -60,15 +59,7 @@ const IndexPage = () => {
          
         >
           <NavBar />
-        <div
-        style={{
-          background: `url(${firstPageInfo?.background_logo})`, // Make sure the path is correct
-          backgroundSize: "cover",
-          //backgroundPosition: "center", // Center the background image
-         // height: "100vh", 
-         // width: "100vh",
-        }}
-        >
+      
           <div className="w-full h-auto sm:h-custom">
             <Banner />
           </div>
@@ -76,17 +67,17 @@ const IndexPage = () => {
             <Client />
           </div>
 
-          <div
-            className="pb-16 mx-8 my-12"
-           
-          >
+          <div className="relative">
+       
             <ServicesSection />
+
+
           </div>
 
           
         </div>
       </div>
-      </div>
+    
       <Footer />
 
     

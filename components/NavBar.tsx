@@ -31,19 +31,19 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between p-6 max-w-full h-8 bg-black h-34 relative">
+    <nav className="relative flex items-center justify-between h-8 max-w-full p-6 bg-black h-34">
       <div className="flex items-center">
-        <Link href="/HomeScreen">
+        <Link href="/">
           <Image
             src={dataObj?.logo}
             alt={dataObj?.title}
             width={40}
             height={40}
-            className="mr-2 w-32 h-28"
+            className="w-32 mr-2 h-28"
           />
         </Link>
       </div>
-      <div className="hidden md:flex items-center space-x-8">
+      <div className="items-center hidden space-x-8 md:flex">
         <Link className="flex items-center text-white" href={"/AboutPage"}>
           <span>About Us</span>
         </Link>
@@ -69,7 +69,7 @@ const NavBar = () => {
           <span>Contact Us</span>
         </Link>
       </div>
-      <div className="md:hidden flex items-center">
+      <div className="flex items-center md:hidden">
         <button
           onClick={toggleMobileMenu}
           className="text-white cursor-pointer"
@@ -81,28 +81,28 @@ const NavBar = () => {
         className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-64 h-screen bg-white z-10`}
       >
         <Link
-          className="flex items-center text-black p-4"
+          className="flex items-center p-4 text-black"
           href={"/AboutPage"}
         >
           <span>About Us</span>
         </Link>
 
         <Link
-          className="flex items-center text-black p-4"
+          className="flex items-center p-4 text-black"
           href={"/LoginScreenUser"}
         >
           <span>Services</span>
         </Link>
 
         <Link
-          className="flex items-center text-black p-4"
+          className="flex items-center p-4 text-black"
           href={"/LoginScreenUser"}
         >
           <span>Our Projects</span>
         </Link>
 
         <Link
-          className="flex items-center text-black p-4"
+          className="flex items-center p-4 text-black"
           href={"/LoginScreenUser"}
         >
           <span>Contact Us</span>
