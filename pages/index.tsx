@@ -9,6 +9,7 @@ import About from "../components/About";
 import ServicesSection from "../components/ServicesSection";
 import Head from 'next/head';
 
+
 const IndexPage = () => {
   const [isChatOpen, setChatOpen] = useState(false);
 

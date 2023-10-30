@@ -21,7 +21,7 @@ const Banner = () => {
     const fetchCarouselData = async () => {
       try {
         const data = await fetchData("api/information/carousel/");
-        const imageUrls = data.map((item) => item.image);
+        const imageUrls = data.map((item) => item?.image);
         setImages(imageUrls);
       } catch (error) {
         // Handle error
