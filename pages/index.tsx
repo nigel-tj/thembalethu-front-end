@@ -5,10 +5,9 @@ import NavBar from "../components/NavBar";
 import Banner from "../components/Banner";
 import Client from "../components/Client";
 import Footer from "../components/Footer";
-import ChatPopup from "../components/ChatPopup";
 import About from "../components/About";
 import ServicesSection from "../components/ServicesSection";
-import Head from 'next/head'; // Import Head from next/head
+import Head from 'next/head';
 
 const IndexPage = () => {
   const [isChatOpen, setChatOpen] = useState(false);
