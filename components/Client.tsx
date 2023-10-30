@@ -65,7 +65,7 @@ export default function Client() {
             // eslint-disable-next-line react/jsx-key
 
             <div
-              key={restaurant.id}
+              key={restaurant?.id}
               className="flex-none flex-shrink-0 scroll-snap-start"
             >
               <div className="flex flex-col items-center p-4 m-4 bg-white shadow-lg bg-opacity-60 backdrop-filter backdrop-blur-lg rounded-xl">
@@ -73,11 +73,11 @@ export default function Client() {
                   className="w-32 h-32 mb-4 rounded-full sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-64 lg:h-32 xl:w-32 xl:h-32"
                   width={300}
                   height={300}
-                  src={restaurant.logo}
-                  alt={restaurant.title}
+                  src={restaurant?.logo}
+                  alt={restaurant?.title}
                 />
                 <div className="text-xl font-medium text-black">
-                  {restaurant.title}
+                  {restaurant?.title}
                 </div>
               </div>
             </div>

@@ -18,6 +18,8 @@ const IndexPage = () => {
   return (
     <>
       <Head>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         {/* Facebook Messenger Chat Plugin */}
         <div id="fb-root"></div>
         <div id="fb-customer-chat" className="fb-customerchat"></div>
