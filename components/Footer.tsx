@@ -8,13 +8,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black dark:bg-gray-800 w-full py-8">
+    <footer className="w-full py-8 bg-black dark:bg-gray-800">
       <div className="max-w-screen-xl px-4 mx-auto">
         <ul className="flex flex-wrap justify-between max-w-screen-md mx-auto text-lg font-light">
           {/* Other links remain the same */}
         </ul>
-        <div className="pt-8 flex max-w-xs mx-auto items-center justify-between">
-         
+        <div className="flex items-center justify-between max-w-xs pt-8 mx-auto">
           <a
             href="#"
             className="text-gray-400 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
@@ -40,9 +39,9 @@ const Footer = () => {
             <FaInstagram size={20} />
           </a>
         </div>
-        <div className="text-center text-white dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
-          Created by Maindo
-        </div>
+      </div>
+      <div className="flex items-center justify-center pt-10 font-light text-center text-white dark:text-gray-200 sm:pt-12">
+        Created by Maindo
       </div>
     </footer>
   );

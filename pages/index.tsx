@@ -8,6 +8,8 @@ import Footer from "../components/Footer";
 import About from "../components/About";
 import ServicesSection from "../components/ServicesSection";
 import Head from 'next/head';
+import ErrorBoundary from "./ErrorBoundary";
+//import ErrorBoundary from "next/dist/client/components/error-boundary";
 
 
 const IndexPage = () => {
@@ -49,11 +51,13 @@ const IndexPage = () => {
           }}
         />
       </Head>
+      <ErrorBoundary>
 
       <NavBar />
       <Banner />
      
       <Footer />
+      </ErrorBoundary>
     </>
   );
 };
