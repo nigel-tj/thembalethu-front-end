@@ -1,8 +1,11 @@
 "use client ";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import ServicesSection from '../components/ServicesSection';
 
-const Quote = () => {
+const QuotePage = () => {
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -14,7 +17,11 @@ const Quote = () => {
   };
 
   return (
+    <>
+    <NavBar />
+    <ServicesSection/>
     <div className="min-h-screen flex items-center justify-center">
+
       <div className="max-w-md p-8 bg-white rounded shadow-lg">
         <h1 className="text-2xl font-semibold mb-4">Request a Quote</h1>
         <form onSubmit={handleSubmit}>
@@ -42,7 +49,9 @@ const Quote = () => {
         </form>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
-export default Quote;
+export default QuotePage;

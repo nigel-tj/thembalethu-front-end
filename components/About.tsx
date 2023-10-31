@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fetchData } from "../utils/sample-data";
+import Team from "./Team";
 
 interface AboutData {
   title: string;
@@ -33,6 +34,7 @@ function About() {
     Array.isArray(aboutData) && aboutData?.length > 0 ? aboutData[0] : null;
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -63,10 +65,11 @@ function About() {
         <h4 className="text-4xl font-semibold">{firstPageInfo?.title}</h4>
         <p
           className="text-lg text-Black"
-          dangerouslySetInnerHTML={{ __html: firstPageInfo?.content }}
-        />
+          dangerouslySetInnerHTML={{ __html: firstPageInfo?.content }} />
       </div>
     </motion.div>
+    <Team />
+    </>
   );
 }
 

@@ -56,11 +56,11 @@ function ServicesSection() {
           showThumbs={false}
           infiniteLoop={true}
           centerMode={true}
-          centerSlidePercentage={90}
+          centerSlidePercentage={80}  // Adjust the card width (smaller value)
           useKeyboardArrows={true}
         >
           {serviceData?.map((service) => (
-            <div key={service.id} className="px-4 sm:px-6 lg:px-8">
+            <div key={service.id} className="px-2 sm:px-4 md:px-6 lg:px-8"> {/* Adjust padding */}
               <div
                 className="relative p-4 mb-8 bg-white rounded-lg shadow-md hover:shadow-lg"
                 style={{

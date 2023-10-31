@@ -50,21 +50,16 @@ const NavBar = () => {
 
         <Link
           className="flex items-center text-white"
-          href={"/LoginScreenUser"}
+          href={"/QuotePage"}
         >
           <span>Services</span>
         </Link>
 
-        <Link
-          className="flex items-center text-white"
-          href={"/LoginScreenUser"}
-        >
-          <span>Our Projects</span>
-        </Link>
+      
 
         <Link
           className="flex items-center text-white"
-          href={"/LoginScreenUser"}
+          href={"/Contactpage"}
         >
           <span>Contact Us</span>
         </Link>
@@ -89,21 +84,16 @@ const NavBar = () => {
 
         <Link
           className="flex items-center p-4 text-black"
-          href={"/LoginScreenUser"}
+          href={"/QuotePage"}
         >
           <span>Services</span>
         </Link>
 
-        <Link
-          className="flex items-center p-4 text-black"
-          href={"/LoginScreenUser"}
-        >
-          <span>Our Projects</span>
-        </Link>
+        
 
         <Link
           className="flex items-center p-4 text-black"
-          href={"/LoginScreenUser"}
+          href={"/Contactpage"}
         >
           <span>Contact Us</span>
         </Link>
