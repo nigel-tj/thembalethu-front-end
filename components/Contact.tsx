@@ -30,7 +30,7 @@ const Contact = (props: Props) => {
 
                 <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Email</h2>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
-                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">hello@merakiui.com</p>
+                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">morris@thembalethusolutions.co.za</p>
               </div>
 
               <div>
@@ -50,7 +50,7 @@ const Contact = (props: Props) => {
 
                 <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Office</h2>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
-                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
+                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">13 gauda st killarney gardens</p>
               </div>
 
               <div>
@@ -60,7 +60,7 @@ const Contact = (props: Props) => {
 
                 <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Phone</h2>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
-                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">+1 (555) 000-0000</p>
+                <p className="mt-2 text-sm text-blue-500 dark:text-blue-400">+27739696778</p>
               </div>
             </div>
 
