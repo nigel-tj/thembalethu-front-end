@@ -49,10 +49,24 @@ const IndexPage = () => {
   
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+     <Head>
+  <title>Thembalethu Solutions - Electrical Solutions</title>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thembalethu Solutions offers top-quality electrical solutions for homes and businesses. Contact us for all your electrical needs." />
+  <meta name="keywords" content="electrical solutions, electrical services, electricians, wiring, electrical projects" />
+  <meta name="author" content="Thembalethu Solutions" />
+
+  {/* Open Graph and Twitter Card tags for social sharing */}
+  <meta property="og:title" content="Thembalethu Solutions - Electrical Solutions" />
+  <meta property="og:description" content="Your trusted partner for electrical solutions. Contact us for all your electrical needs." />
+  <meta property="og:image" content="https://ludmilpaulo.pythonanywhere.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ThembalethuSolutions" />
+
+
+</Head>
+
 
       <div className="flex flex-col min-h-screen">
         <div className="flex-grow"

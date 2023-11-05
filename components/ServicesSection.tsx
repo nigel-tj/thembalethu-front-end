@@ -56,7 +56,7 @@ function ServicesSection() {
           showThumbs={false}
           infiniteLoop={true}
           centerMode={true}
-          centerSlidePercentage={80}  // Adjust the card width (smaller value)
+          centerSlidePercentage={30}  // Adjust the card width (smaller value)
           useKeyboardArrows={true}
         >
           {serviceData?.map((service) => (
@@ -73,6 +73,9 @@ function ServicesSection() {
                   {service.name}
                 </h4>
                 <p className="text-black">{service.description}</p>
+                <br></br>
+                <br></br>
+                <br></br>
                 <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4">
                   <button
                     className="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600"
