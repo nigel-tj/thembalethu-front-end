@@ -45,8 +45,8 @@ const Team: React.FC = () => {
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
             {aboutData.map((teamMember) => (
               <div key={teamMember.id} className="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent">
-                <div className="relative w-32 h-32 rounded-full ring-4 ring-gray-300">
-                  <Image src={teamMember.image} alt={teamMember.name} layout="fill" />
+                <div className="relative rounded-full ring-4 ring-gray-300">
+                  <Image src={teamMember.image} alt={teamMember.name} width={100} height={100} />
                 </div>
 
                 <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
