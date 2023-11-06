@@ -31,15 +31,15 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="relative flex items-center justify-between h-8 max-w-full p-6 bg-white h-34">
+    <nav className="relative flex items-center justify-between h-44 max-w-full p-6 bg-white h-34">
       <div className="flex items-center">
         <Link href="/">
           <Image
             src={dataObj?.logo}
             alt={dataObj?.title}
-            width={40}
-            height={40}
-            className="w-32 mr-2 h-28"
+            width={100}
+            height={100}
+            className="w-[400px] mt-4 mr-2 h-[400px]"
           />
         </Link>
       </div>
@@ -50,7 +50,7 @@ const NavBar = () => {
 
         <Link
           className="flex items-center text-[#1a3f85]"
-          href={"/QuotePage"}
+          href={"/ServicePage"}
         >
           <span>Services</span>
         </Link>

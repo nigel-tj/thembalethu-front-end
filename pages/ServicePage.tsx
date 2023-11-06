@@ -38,7 +38,10 @@ const ServicePage: React.FC = () => {
                  <img src={service.image} alt="Service Image" className="rounded-lg" />
              </div><div className="w-1/2 p-4">
                     <h1 className="text-3xl font-bold">{service.name}</h1>
-                     <p className="text-gray-600">{service.description}</p>
+                   
+                     <p className="text-gray-600"
+                      dangerouslySetInnerHTML={{ __html: service.description }}
+                     ></p>
                  </div></>
        ))}
     </div>
