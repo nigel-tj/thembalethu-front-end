@@ -20,7 +20,7 @@ const Team: React.FC = () => {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const data = await fetchData<TeamMember[]>("api/information/team/");
+        const data = await fetchData("api/information/team/");
         console.log("api data", data);
         setAboutData(data);
       } catch (error) {
