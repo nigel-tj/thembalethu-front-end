@@ -31,7 +31,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="relative flex items-center justify-between h-8 max-w-full p-6 bg-black h-34">
+    <nav className="relative flex items-center justify-between h-8 max-w-full p-6 bg-white h-34">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -44,12 +44,12 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="items-center hidden space-x-8 md:flex">
-        <Link className="flex items-center text-white" href={"/AboutPage"}>
+        <Link className="flex items-center text-[#1a3f85]" href={"/AboutPage"}>
           <span>About Us</span>
         </Link>
 
         <Link
-          className="flex items-center text-white"
+          className="flex items-center text-[#1a3f85]"
           href={"/QuotePage"}
         >
           <span>Services</span>
@@ -58,7 +58,7 @@ const NavBar = () => {
       
 
         <Link
-          className="flex items-center text-white"
+          className="flex items-center text-[#1a3f85]"
           href={"/Contactpage"}
         >
           <span>Contact Us</span>
@@ -84,7 +84,7 @@ const NavBar = () => {
 
         <Link
           className="flex items-center p-4 text-black"
-          href={"/QuotePage"}
+          href={"/ServicePage"}
         >
           <span>Services</span>
         </Link>
