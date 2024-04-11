@@ -1,9 +1,10 @@
+import { IoClose, IoMenu } from "react-icons/io5";
 import { useEffect, useState } from "react";
-import { IoMenu, IoClose } from "react-icons/io5";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { fetchData } from "../utils/sample-data";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ const NavBar = () => {
             alt={dataObj?.title}
             width={100}
             height={100}
-            className="w-[400px] mt-4 mr-2 h-[400px]"
+            className="h-[100px]"
           />
         </Link>
       </div>
