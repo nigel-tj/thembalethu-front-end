@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { IoChatbubbleOutline } from "react-icons/io5";
-import NavBar from "../components/NavBar";
+
+import About from "../components/About";
 import Banner from "../components/Banner";
 import Client from "../components/Client";
 import Footer from "../components/Footer";
-import About from "../components/About";
+import Head from 'next/head';
+import { IoChatbubbleOutline } from "react-icons/io5";
+import NavBar from "../components/NavBar";
+import Script from 'next/script';
+import ServicesSection from "../components/ServicesSection";
+import { fetchData } from "../utils/sample-data";
+
 //import background_logo from '../assets/Untitled.png'; // Adjust the path
 
-import ServicesSection from "../components/ServicesSection";
-import Head from 'next/head';
-import Script from 'next/script';
-import { fetchData } from "../utils/sample-data";
+
+
+
+
 
 interface AboutData {
   title: string;
@@ -63,6 +69,10 @@ const IndexPage = () => {
   <meta property="og:image" content="https://ludmilpaulo.pythonanywhere.com/" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@ThembalethuSolutions" />
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+      
+        
 
 
 </Head>

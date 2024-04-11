@@ -33,7 +33,8 @@ const NavBar = () => {
 
   return (
     <nav className="relative flex items-center justify-between max-w-full px-6 py-4 bg-white">
-      <div className="flex items-center">
+    <div className="flex items-center justify-start">
+      <div className="mr-auto">
         <Link href="/">
           <Image
             src={dataObj?.logo}
@@ -44,62 +45,41 @@ const NavBar = () => {
           />
         </Link>
       </div>
-      <div className="items-center hidden space-x-8 md:flex">
-        <Link className="flex items-center text-[#1a3f85]" href={"/AboutPage"}>
-          <span>About Us</span>
-        </Link>
-
-        <Link
-          className="flex items-center text-[#1a3f85]"
-          href={"/ServicePage"}
-        >
-          <span>Services</span>
-        </Link>
-
-      
-
-        <Link
-          className="flex items-center text-[#1a3f85]"
-          href={"/Contactpage"}
-        >
-          <span>Contact Us</span>
-        </Link>
+    </div>
+    <div className="items-center flex-1">
+      <div className="flex justify-center">
+        <div className="flex space-x-8">
+          <Link className="flex items-center text-[#1a3f85] text-lg" href={"/AboutPage"}>
+            <span>About Us</span>
+          </Link>
+  
+          <Link
+            className="flex items-center text-[#1a3f85] text-lg"
+            href={"/ServicePage"}
+          >
+            <span>Services</span>
+          </Link>
+  
+          <Link
+            className="flex items-center text-[#1a3f85] text-lg"
+            href={"/Contactpage"}
+          >
+            <span>Contact Us</span>
+          </Link>
+        </div>
       </div>
-      <div className="flex items-center md:hidden">
-        <button
-          onClick={toggleMobileMenu}
-          className="text-white cursor-pointer"
-        >
-          {isMobileMenuOpen ? <IoClose /> : <IoMenu />}
-        </button>
+    </div>
+    <div className="flex items-center justify-end">
+      <div className="flex space-x-4">
+        {/* Example social media icons */}
+        <a href="#" className="text-[#1a3f85] text-lg"><i className="fab fa-facebook"></i></a>
+        <a href="#" className="text-[#1a3f85] text-lg"><i className="fab fa-twitter"></i></a>
+        <a href="#" className="text-[#1a3f85] text-lg"><i className="fab fa-instagram"></i></a>
       </div>
-      <div
-        className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-64 h-screen bg-white z-10`}
-      >
-        <Link
-          className="flex items-center p-4 text-black"
-          href={"/AboutPage"}
-        >
-          <span>About Us</span>
-        </Link>
+    </div>
+  </nav>
+  
 
-        <Link
-          className="flex items-center p-4 text-black"
-          href={"/ServicePage"}
-        >
-          <span>Services</span>
-        </Link>
-
-        
-
-        <Link
-          className="flex items-center p-4 text-black"
-          href={"/Contactpage"}
-        >
-          <span>Contact Us</span>
-        </Link>
-      </div>
-    </nav>
   );
 };
 
