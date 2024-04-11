@@ -32,7 +32,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="relative flex items-center justify-between h-44 max-w-full p-6 bg-white h-34">
+    <nav className="relative flex items-center justify-between max-w-full px-6 py-4 bg-white">
       <div className="flex items-center">
         <Link href="/">
           <Image
