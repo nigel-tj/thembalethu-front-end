@@ -39,9 +39,9 @@ const NavBar = () => {
           <Image
             src={dataObj?.logo}
             alt={dataObj?.title}
-            width={100}
-            height={100}
-            className="h-[100px]"
+            width={200}
+            height={149}
+            className="h-[149px]"
           />
         </Link>
       </div>
