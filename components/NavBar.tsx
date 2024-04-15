@@ -32,9 +32,9 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="relative flex items-center justify-between max-w-full px-6 py-4 bg-white">
+    <nav className="relative flex items-center justify-between max-w-full px-6 py-4">
     <div className="flex items-center justify-start">
-      <div className="mr-auto">
+      <div className="mr-auto logo">
         <Link href="/">
           <Image
             src={dataObj?.logo}

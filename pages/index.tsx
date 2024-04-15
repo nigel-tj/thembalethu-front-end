@@ -79,36 +79,24 @@ const IndexPage = () => {
 
 
       <div className="flex flex-col min-h-screen">
-        <div className="flex-grow"
-         
-        >
+        <div className="hero-section">
           <NavBar />
-      
+        </div>
+        
+        <div className="flex-grow">
+  
           <div className="w-full h-auto sm:h-custom">
             <Banner />
           </div>
           <div className="px-2 sm:px-4">
             <Client />
           </div>
-{/**
- * 
-  <div className="relative">
-       
-            <ServicesSection />
-
-
-          </div>
- * 
- */}
-         
-
-          
+      
         </div>
       </div>
     
       <Footer />
-
-    
+ 
     </>
   );
 };
