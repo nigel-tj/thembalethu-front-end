@@ -49,14 +49,6 @@
 h1 {
   margin: 0 0 3rem 0;
   font-family: 'Varta', sans-serif;
-  text-shadow: 2px 2px black;
-}
-
-p {
-  font-family: 'Archivo', sans-serif;
-  text-shadow: 2px 2px black;
-  letter-spacing: 3px;
-  color: white;
 }
 
 nav {
