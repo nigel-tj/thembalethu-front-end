@@ -40,7 +40,7 @@ const NavBar = () => {
             src={dataObj?.logo}
             alt={dataObj?.title}
             width={200}
-            height={149}
+            height={100}
             className="h-[149px]"
           />
         </Link>
