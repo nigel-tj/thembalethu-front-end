@@ -49,19 +49,19 @@ const NavBar = () => {
     <div className="items-center flex-1">
       <div className="flex justify-center">
         <div className="flex space-x-8">
-          <Link className="flex items-center text-[#1a3f85] text-lg" href={"/AboutPage"}>
+          <Link className="flex items-center text-[#e20613] text-lg font-black" href={"/AboutPage"}>
             <span>About Us</span>
           </Link>
   
           <Link
-            className="flex items-center text-[#1a3f85] text-lg"
+            className="flex items-center text-[#e20613] text-lg font-black"
             href={"/ServicePage"}
           >
             <span>Services</span>
           </Link>
   
           <Link
-            className="flex items-center text-[#1a3f85] text-lg"
+            className="flex items-center text-[#e20613] text-lg font-black"
             href={"/Contactpage"}
           >
             <span>Contact Us</span>
