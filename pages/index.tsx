@@ -10,7 +10,10 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import NavBar from "../components/NavBar";
 import Script from 'next/script';
 import ServicesSection from "../components/ServicesSection";
+import constructionImage from '../assets/thembalethu-construction.jpg';
+import electricalImage from '../assets/thembalethu-electrical.jpg';
 import { fetchData } from "../utils/sample-data";
+import solarImage from '../assets/thembalethu-solar.jpg';
 
 //import background_logo from '../assets/Untitled.png'; // Adjust the path
 
@@ -113,7 +116,7 @@ const IndexPage = () => {
             <div className="flex flex-wrap -m-4">
               <div className="p-4 md:w-1/3">
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src="/assets/thembalethu-construction.jpg" alt="blog" width={400} height={400} />
+                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={constructionImage} alt="blog" width={400} height={400} />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 bg-red-600 rounded-lg text-center px-4 text-white">CONSTRUCTION</h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">General Building</h1>
@@ -131,7 +134,7 @@ const IndexPage = () => {
               </div>
               <div className="p-4 md:w-1/3">
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog" width={400} height={400} />
+                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={electricalImage} alt="blog" width={400} height={400} />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 bg-red-600 rounded-lg text-center px-4 text-white">ELECTRICAL</h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">Industrial & Residential</h1>
@@ -149,7 +152,7 @@ const IndexPage = () => {
               </div>
               <div className="p-4 md:w-1/3">
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog" width={400} height={400} />
+                  <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={solarImage} alt="blog" width={400} height={400} />
                   <div className="p-6">
                     <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1 bg-red-600 rounded-lg text-center px-4">SOLAR</h2>
                     <h1 className="title-font text-lg font-medium text-gray-900 mb-3  text-center text-center text-gray-900">We Go Green</h1>
