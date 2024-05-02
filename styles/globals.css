@@ -34,6 +34,19 @@
   background-size: cover;
   background-position: center;
 }
+
+.hero-section-secondary {
+  height: 100vh;
+  
+  color: white;
+  
+  background-image: 
+    url('../assets/thembalethu-secondary-page-header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;

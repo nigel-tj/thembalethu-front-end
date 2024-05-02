@@ -1,9 +1,10 @@
 // ServicePage.tsx
 
-import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { fetchData } from '../utils/sample-data';
+
 import NavBar from '../components/NavBar';
+import { fetchData } from '../utils/sample-data';
+import { useRouter } from 'next/router';
 
 interface Service {
   id: number;
@@ -35,7 +36,10 @@ const ServicePage: React.FC = () => {
 
   return (
     <>
-      <NavBar />
+      <div className="hero-section-secondary">
+        <NavBar />
+      </div>
+      
       <div className="mb-8 text-center">
         <span className="block mb-2 text-lg font-semibold text-primary">
           Our Core Services
