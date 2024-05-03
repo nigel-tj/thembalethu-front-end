@@ -72,15 +72,15 @@ const ServicePage: React.FC = () => {
                   className="rounded-lg"
                 />
               </div>
-              <div className="w-1/2 p-4">
-                <h1 className="text-3xl font-bold">{service.name}</h1>
+              <div className="w-1/2 p-2">
+                <h2 className="text-3xl font-bold">{service.name}</h2>
                 <p
-                  className="text-gray-600"
+                  className="text-gray-600 "
                   dangerouslySetInnerHTML={{ __html: service.description }}
                 ></p>
                 <button
                   onClick={() => handleGetQuote(service.id)}
-                  className="mt-4 px-4 py-2 bg-primary text-white rounded-full hover:bg-primary-dark"
+                  className=" hidden mt-4 px-4 py-2 bg-primary text-black rounded-full hover:bg-primary-dark"
                 >
                   Get a Quote
                 </button>
