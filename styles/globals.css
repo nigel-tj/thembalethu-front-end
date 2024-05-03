@@ -36,15 +36,8 @@
 }
 
 .hero-section-secondary {
-  height: 100vh;
+  border-bottom: #000;
   
-  color: white;
-  
-  background-image: 
-    url('../assets/thembalethu-secondary-page-header.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-text {
@@ -70,7 +63,7 @@ nav {
 }
 
 nav:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 ul {
